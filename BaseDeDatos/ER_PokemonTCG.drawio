@@ -1,0 +1,418 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram id="UAy8IQr0vHRJ_Cyi94bW" name="Página-1">
+    <mxGraphModel dx="2591" dy="2133" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#CC0000;fontColor=#FFFFFF;strokeColor=#CC0000;swimlaneLine=1;rounded=1;arcSize=4;" value="USUARIO" vertex="1">
+          <mxGeometry height="176" width="260" x="-190" y="-412" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="2" style="text;strokeColor=none;fillColor=#F8E0E0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_usuario : INT" vertex="1">
+          <mxGeometry height="24" width="260" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="2" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  nombre_usuario : VARCHAR(50)  [NOT NULL, UNIQUE]" vertex="1">
+          <mxGeometry height="24" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="2" style="text;strokeColor=none;fillColor=#F8E0E0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  correo : VARCHAR(100)  [NOT NULL, UNIQUE]" vertex="1">
+          <mxGeometry height="24" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="2" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  contrasena_hash : VARCHAR(256)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="260" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="2" style="text;strokeColor=none;fillColor=#F8E0E0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  fecha_registro : DATETIME  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="260" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="2" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  nivel : INT  [DEFAULT 1]" vertex="1">
+          <mxGeometry height="24" width="260" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#1A1A6C;fontColor=#FFFFFF;strokeColor=#1A1A6C;swimlaneLine=1;rounded=1;arcSize=4;" value="CARTA" vertex="1">
+          <mxGeometry height="224" width="280" x="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="9" style="text;strokeColor=none;fillColor=#E3E3ED;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_carta : INT" vertex="1">
+          <mxGeometry height="24" width="280" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="9" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  nombre : VARCHAR(100)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="9" style="text;strokeColor=none;fillColor=#E3E3ED;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  tipo_carta : ENUM  [Pokemon|Entrenador|Energia]" vertex="1">
+          <mxGeometry height="24" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="9" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  expansion : VARCHAR(80)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="9" style="text;strokeColor=none;fillColor=#E3E3ED;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  numero_coleccion : VARCHAR(10)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="9" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  rareza : VARCHAR(30)" vertex="1">
+          <mxGeometry height="24" width="280" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="9" style="text;strokeColor=none;fillColor=#E3E3ED;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  imagen_url : VARCHAR(255)" vertex="1">
+          <mxGeometry height="24" width="280" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="9" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  es_ilimitada : BOOLEAN" vertex="1">
+          <mxGeometry height="24" width="280" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#CC6600;fontColor=#FFFFFF;strokeColor=#CC6600;swimlaneLine=1;rounded=1;arcSize=4;" value="CARTA_POKEMON" vertex="1">
+          <mxGeometry height="392" width="300" x="880" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="18" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_carta : INT  [CARTA]" vertex="1">
+          <mxGeometry height="24" width="300" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="18" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  hp : INT  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="18" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  tipo_energia : VARCHAR(20)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="18" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  habilidad_nombre : VARCHAR(80)  [NULL si no aplica]" vertex="1">
+          <mxGeometry height="24" width="300" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="18" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  habilidad_desc : TEXT" vertex="1">
+          <mxGeometry height="24" width="300" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="18" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  ataque1_nombre : VARCHAR(80)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="18" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  ataque1_costo : VARCHAR(20)" vertex="1">
+          <mxGeometry height="24" width="300" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="26" parent="18" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  ataque1_danio : INT" vertex="1">
+          <mxGeometry height="24" width="300" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="27" parent="18" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  ataque2_nombre : VARCHAR(80)  [NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="28" parent="18" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  ataque2_costo : VARCHAR(20)  [NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="29" parent="18" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  ataque2_danio : INT  [NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="272" as="geometry" />
+        </mxCell>
+        <mxCell id="30" parent="18" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  debilidad_tipo : VARCHAR(20)" vertex="1">
+          <mxGeometry height="24" width="300" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="18" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  resistencia_tipo : VARCHAR(20)  [NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="32" parent="18" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  costo_retirada : INT" vertex="1">
+          <mxGeometry height="24" width="300" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="33" parent="18" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  regla_ex : BOOLEAN" vertex="1">
+          <mxGeometry height="24" width="300" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="34" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#CC6600;fontColor=#FFFFFF;strokeColor=#CC6600;swimlaneLine=1;rounded=1;arcSize=4;" value="CARTA_ENERGIA" vertex="1">
+          <mxGeometry height="128" width="300" x="820" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="35" parent="34" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_carta : INT  [CARTA]" vertex="1">
+          <mxGeometry height="24" width="300" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="36" parent="34" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  tipo_energia : VARCHAR(20)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="37" parent="34" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  es_especial : BOOLEAN  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="38" parent="34" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  descripcion_efecto : TEXT  [NULL si básica]" vertex="1">
+          <mxGeometry height="24" width="300" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="39" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#CC6600;fontColor=#FFFFFF;strokeColor=#CC6600;swimlaneLine=1;rounded=1;arcSize=4;" value="CARTA_ENTRENADOR" vertex="1">
+          <mxGeometry height="104" width="300" x="760" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="40" parent="39" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_carta : INT  [CARTA]" vertex="1">
+          <mxGeometry height="24" width="300" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="41" parent="39" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  subtipo : ENUM  [Item|Soporte|Estadio|Herramienta]" vertex="1">
+          <mxGeometry height="24" width="300" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="42" parent="39" style="text;strokeColor=none;fillColor=#F8ECE0;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  efecto_desc : TEXT  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="43" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#2E7D32;fontColor=#FFFFFF;strokeColor=#2E7D32;swimlaneLine=1;rounded=1;arcSize=4;" value="COLECCION" vertex="1">
+          <mxGeometry height="128" width="280" x="330" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="44" parent="43" style="text;strokeColor=none;fillColor=#E5EFE6;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_usuario : INT  [USUARIO]" vertex="1">
+          <mxGeometry height="24" width="280" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="45" parent="43" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_carta : INT  [CARTA]" vertex="1">
+          <mxGeometry height="24" width="280" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="46" parent="43" style="text;strokeColor=none;fillColor=#E5EFE6;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  cantidad : INT  [NOT NULL, CHECK &gt;= 0]" vertex="1">
+          <mxGeometry height="24" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="47" parent="43" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  fecha_obtencion : DATETIME" vertex="1">
+          <mxGeometry height="24" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="48" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#2E7D32;fontColor=#FFFFFF;strokeColor=#2E7D32;swimlaneLine=1;rounded=1;arcSize=4;" value="BARAJA" vertex="1">
+          <mxGeometry height="176" width="260" x="20" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="49" parent="48" style="text;strokeColor=none;fillColor=#E5EFE6;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_baraja : INT" vertex="1">
+          <mxGeometry height="24" width="260" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="50" parent="48" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_usuario : INT  [USUARIO]" vertex="1">
+          <mxGeometry height="24" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="51" parent="48" style="text;strokeColor=none;fillColor=#E5EFE6;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  nombre : VARCHAR(80)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="52" parent="48" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  formato : ENUM  [Estandar|Expandido]" vertex="1">
+          <mxGeometry height="24" width="260" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="53" parent="48" style="text;strokeColor=none;fillColor=#E5EFE6;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  fecha_creacion : DATETIME  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="260" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="54" parent="48" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  activa : BOOLEAN  [DEFAULT TRUE]" vertex="1">
+          <mxGeometry height="24" width="260" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="55" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#2E7D32;fontColor=#FFFFFF;strokeColor=#2E7D32;swimlaneLine=1;rounded=1;arcSize=4;" value="BARAJA_CARTA" vertex="1">
+          <mxGeometry height="104" width="260" x="20" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="56" parent="55" style="text;strokeColor=none;fillColor=#E5EFE6;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_baraja : INT  [BARAJA]" vertex="1">
+          <mxGeometry height="24" width="260" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="57" parent="55" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_carta : INT  [CARTA]" vertex="1">
+          <mxGeometry height="24" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="58" parent="55" style="text;strokeColor=none;fillColor=#E5EFE6;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  cantidad : INT  [CHECK 1–4]" vertex="1">
+          <mxGeometry height="24" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="59" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#4A148C;fontColor=#FFFFFF;strokeColor=#4A148C;swimlaneLine=1;rounded=1;arcSize=4;" value="PARTIDA" vertex="1">
+          <mxGeometry height="272" width="300" x="900" y="-70" as="geometry" />
+        </mxCell>
+        <mxCell id="60" parent="59" style="text;strokeColor=none;fillColor=#E9E2F1;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_partida : INT" vertex="1">
+          <mxGeometry height="24" width="300" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="61" parent="59" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_usuario1 : INT  [USUARIO]" vertex="1">
+          <mxGeometry height="24" width="300" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="62" parent="59" style="text;strokeColor=none;fillColor=#E9E2F1;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_usuario2 : INT  [USUARIO]" vertex="1">
+          <mxGeometry height="24" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="63" parent="59" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_baraja1 : INT  [BARAJA]" vertex="1">
+          <mxGeometry height="24" width="300" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="64" parent="59" style="text;strokeColor=none;fillColor=#E9E2F1;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_baraja2 : INT  [BARAJA]" vertex="1">
+          <mxGeometry height="24" width="300" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="65" parent="59" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  fecha_hora : DATETIME  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="66" parent="59" style="text;strokeColor=none;fillColor=#E9E2F1;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  duracion_seg : INT  [NULL si abandonada]" vertex="1">
+          <mxGeometry height="24" width="300" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="67" parent="59" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  resultado : ENUM  [Usuario1|Usuario2|Empate]" vertex="1">
+          <mxGeometry height="24" width="300" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="68" parent="59" style="text;strokeColor=none;fillColor=#E9E2F1;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  formato : ENUM  [Estandar|Expandido]" vertex="1">
+          <mxGeometry height="24" width="300" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="69" parent="59" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ primero_fue : INT  [USUARIO]" vertex="1">
+          <mxGeometry height="24" width="300" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="70" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#4A148C;fontColor=#FFFFFF;strokeColor=#4A148C;swimlaneLine=1;rounded=1;arcSize=4;" value="PREMIO_PARTIDA" vertex="1">
+          <mxGeometry height="176" width="300" x="1040" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="71" parent="70" style="text;strokeColor=none;fillColor=#E9E2F1;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_premio : INT" vertex="1">
+          <mxGeometry height="24" width="300" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="72" parent="70" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_partida : INT  [PARTIDA]" vertex="1">
+          <mxGeometry height="24" width="300" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="73" parent="70" style="text;strokeColor=none;fillColor=#E9E2F1;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_usuario : INT  [USUARIO]" vertex="1">
+          <mxGeometry height="24" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="74" parent="70" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  tipo_recompensa : ENUM  [Monedas|Cristales|Gemas|Carta]" vertex="1">
+          <mxGeometry height="24" width="300" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="75" parent="70" style="text;strokeColor=none;fillColor=#E9E2F1;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  cantidad : INT  [NULL si carta]" vertex="1">
+          <mxGeometry height="24" width="300" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="76" parent="70" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_carta : INT  [CARTA, NULL]" vertex="1">
+          <mxGeometry height="24" width="300" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="77" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#006064;fontColor=#FFFFFF;strokeColor=#006064;swimlaneLine=1;rounded=1;arcSize=4;" value="TIENDA_ITEM" vertex="1">
+          <mxGeometry height="224" width="280" x="1330" y="-110" as="geometry" />
+        </mxCell>
+        <mxCell id="78" parent="77" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_item : INT" vertex="1">
+          <mxGeometry height="24" width="280" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="79" parent="77" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  nombre : VARCHAR(100)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="80" parent="77" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  descripcion : TEXT" vertex="1">
+          <mxGeometry height="24" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="81" parent="77" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  tipo : ENUM  [Sobre|Cosmetico|Monedas|Bundle]" vertex="1">
+          <mxGeometry height="24" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="82" parent="77" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  precio_monedas : INT  [NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="83" parent="77" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  precio_cristales : INT  [NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="84" parent="77" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  precio_gemas : INT  [NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="85" parent="77" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  disponible : BOOLEAN  [DEFAULT TRUE]" vertex="1">
+          <mxGeometry height="24" width="280" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="86" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#006064;fontColor=#FFFFFF;strokeColor=#006064;swimlaneLine=1;rounded=1;arcSize=4;" value="TRANSACCION" vertex="1">
+          <mxGeometry height="176" width="280" x="1570" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="87" parent="86" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_tx : INT" vertex="1">
+          <mxGeometry height="24" width="280" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="88" parent="86" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_usuario : INT  [USUARIO]" vertex="1">
+          <mxGeometry height="24" width="280" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="89" parent="86" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_item : INT  [TIENDA_ITEM]" vertex="1">
+          <mxGeometry height="24" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="90" parent="86" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  fecha_hora : DATETIME  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="91" parent="86" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  moneda_usada : ENUM  [Monedas|Cristales|Gemas]" vertex="1">
+          <mxGeometry height="24" width="280" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="92" parent="86" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  cantidad_pagada : INT  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="93" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#006064;fontColor=#FFFFFF;strokeColor=#006064;swimlaneLine=1;rounded=1;arcSize=4;" value="COSMETICO" vertex="1">
+          <mxGeometry height="128" width="280" x="1440" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="94" parent="93" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_cosmetico : INT" vertex="1">
+          <mxGeometry height="24" width="280" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="95" parent="93" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_item : INT  [TIENDA_ITEM]" vertex="1">
+          <mxGeometry height="24" width="280" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="96" parent="93" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  tipo : ENUM  [Tablero|Reverso|Avatar|Moneda]" vertex="1">
+          <mxGeometry height="24" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="97" parent="93" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  imagen_url : VARCHAR(255)" vertex="1">
+          <mxGeometry height="24" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="98" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#006064;fontColor=#FFFFFF;strokeColor=#006064;swimlaneLine=1;rounded=1;arcSize=4;" value="USUARIO_COSMETICO" vertex="1">
+          <mxGeometry height="128" width="280" x="1570" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="99" parent="98" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_usuario : INT  [USUARIO]" vertex="1">
+          <mxGeometry height="24" width="280" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="100" parent="98" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_cosmetico : INT  [COSMETICO]" vertex="1">
+          <mxGeometry height="24" width="280" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="101" parent="98" style="text;strokeColor=none;fillColor=#E0EBEC;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  fecha_adquisicion : DATETIME  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="102" parent="98" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  equipado : BOOLEAN  [DEFAULT FALSE]" vertex="1">
+          <mxGeometry height="24" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="103" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#880E4F;fontColor=#FFFFFF;strokeColor=#880E4F;swimlaneLine=1;rounded=1;arcSize=4;" value="PASE_COMBATE" vertex="1">
+          <mxGeometry height="200" width="280" x="20" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="104" parent="103" style="text;strokeColor=none;fillColor=#F0E2E9;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_pase : INT" vertex="1">
+          <mxGeometry height="24" width="280" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="105" parent="103" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_usuario : INT  [USUARIO]" vertex="1">
+          <mxGeometry height="24" width="280" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="106" parent="103" style="text;strokeColor=none;fillColor=#F0E2E9;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  temporada : VARCHAR(30)  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="107" parent="103" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  nivel_actual : INT  [DEFAULT 1]" vertex="1">
+          <mxGeometry height="24" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="108" parent="103" style="text;strokeColor=none;fillColor=#F0E2E9;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  xp_actual : INT  [DEFAULT 0]" vertex="1">
+          <mxGeometry height="24" width="280" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="109" parent="103" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  fecha_inicio : DATE  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="110" parent="103" style="text;strokeColor=none;fillColor=#F0E2E9;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  fecha_fin : DATE  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="111" parent="1" style="swimlane;startSize=32;fontStyle=1;fontSize=12;fillColor=#880E4F;fontColor=#FFFFFF;strokeColor=#880E4F;swimlaneLine=1;rounded=1;arcSize=4;" value="RECOMPENSA_PASE" vertex="1">
+          <mxGeometry height="176" width="280" x="390" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="112" parent="111" style="text;strokeColor=none;fillColor=#F0E2E9;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=1;" value="🔑 id_recompensa : INT" vertex="1">
+          <mxGeometry height="24" width="280" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="113" parent="111" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="⬡ id_pase : INT  [PASE_COMBATE]" vertex="1">
+          <mxGeometry height="24" width="280" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="114" parent="111" style="text;strokeColor=none;fillColor=#F0E2E9;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  nivel_requerido : INT  [NOT NULL]" vertex="1">
+          <mxGeometry height="24" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="115" parent="111" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  tipo_recompensa : ENUM  [Monedas|Cristales|Carta|Cosmetico]" vertex="1">
+          <mxGeometry height="24" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="116" parent="111" style="text;strokeColor=none;fillColor=#F0E2E9;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  id_item_o_carta : INT  [NULL si es divisa]" vertex="1">
+          <mxGeometry height="24" width="280" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="117" parent="111" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=6;fontSize=10;fontStyle=0;" value="  es_premium : BOOLEAN  [DEFAULT FALSE]" vertex="1">
+          <mxGeometry height="24" width="280" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="118" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="48" value="1..N posee">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="119" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="43" value="1..N tiene_en">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="120" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="43" value="1..N pertenece_a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="121" edge="1" parent="1" source="48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="55" value="1..N compone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="122" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="55" value="1..N incluida_en">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="123" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="59" value="1..N juega">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="124" edge="1" parent="1" source="48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="59" value="1..N se_usa_en">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="125" edge="1" parent="1" source="59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="70" value="1..N genera">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="126" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="86" value="1..N realiza">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="127" edge="1" parent="1" source="77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="86" value="1..N incluida_en">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="128" edge="1" parent="1" source="77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmandOne;endFill=0;fontSize=10;" target="93" value="1..1 es_subtipo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="129" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="98" value="1..N desbloquea">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="755" y="-252" />
+              <mxPoint x="755" y="1020" />
+              <mxPoint x="1400" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="130" edge="1" parent="1" source="93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="98" value="1..N equipado_por">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="131" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="103" value="1..N progresa_en">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="132" edge="1" parent="1" source="103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=10;" target="111" value="1..N contiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="133" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmandOne;endFill=0;fontSize=10;" target="18" value="1..1 especializa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="134" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmandOne;endFill=0;fontSize=10;" target="34" value="1..1 especializa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="135" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmandOne;endFill=0;fontSize=10;" target="39" value="1..1 especializa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
