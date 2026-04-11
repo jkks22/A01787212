@@ -335,7 +335,7 @@ defmodule Hw.Ariel2 do
     fn a, b -> func.(b, a) end
   end
 
-#helper for there_exists_one?
+#helper for there_exists_one
 #count_matching/2: counts how many elements in the list satisfy the predicate pred.
   def count_matching(pred, list) do
     if list == [] do
@@ -352,9 +352,9 @@ defmodule Hw.Ariel2 do
   end
 
 #exercise 15
-#there_exists_one?/2: returns true if exactly one element of the list satisfies the predicate.
+#there_exists_one/2: returns true if exactly one element of the list satisfies the predicate.
 #uses count_matching/2 and verifies that the count is exactly 1.
-  def there_exists_one?(pred, list) do
+  def there_exists_one(pred, list) do
     count = count_matching(pred, list)
     count == 1
   end
